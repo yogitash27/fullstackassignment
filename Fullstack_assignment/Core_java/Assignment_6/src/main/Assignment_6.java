@@ -16,15 +16,15 @@ class Assignment_6
 		{
 			System.out.println("***Main Menu***\n1. Create Account\n   1. Default Details\n   2. Name and Amount");
 			System.out.println("2. Check Account Balance\n3. Deposit\n4. Withdrawal\n5. Transfer\n6.Exit");
-            System.out.println("Enter Your Choice :");
-            ch = scan.nextInt();	
-            switch(ch)
-            {	
-            	case 1:
-            			 System.out.println("Enter Your Choice :");
+           		 System.out.println("Enter Your Choice :");
+            		ch = scan.nextInt();	
+           		 switch(ch)
+           		 {	
+            			case 1:
+            			 	 System.out.println("Enter Your Choice :");
            				 int c = scan.nextInt();
             			 switch(c)
-            			{
+            			 {
             				case 1: 
             						m.accountCreate();
             						break;

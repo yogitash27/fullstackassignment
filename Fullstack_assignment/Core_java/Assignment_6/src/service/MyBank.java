@@ -26,19 +26,21 @@ public class MyBank extends AccountInit implements Bank1
 			  else
 			  {
 				  	float amt = a[from_acc].getAmount();
-				  	float bal = amt - amount;
-				  	if (bal > 500)
-				  	{
-				  			bal = amt - amount;
-				  			a[from_acc].setAmount(bal);
+			  		float bal = amt - amount;
+			  		float amt1=a[to_acc].getAmount();
+			  		float bal1 = amt1 + amount;
+			  		if (bal > 500)
+			  		{
+			  				bal = amt - amount;
+			  				a[from_acc].setAmount(bal);
 
-				  			float bal1 = amt + amount;
-				  			a[to_acc].setAmount(bal1);
-				  	} 
-				  	else
-				  	{
-				  			throw new NotSufficientFundException("Balance is insufficient you can't transfer");
-				  	}
+			  				bal1 = amt1 + amount;
+			  				a[to_acc].setAmount(bal1);
+			  		} 
+			  		else
+			  		{
+			  				throw new NotSufficientFundException("Balance is insufficient you can't transfer");
+			  		}	
 			 }
 		}
 	}
