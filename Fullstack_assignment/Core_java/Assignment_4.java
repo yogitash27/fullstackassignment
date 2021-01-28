@@ -10,7 +10,6 @@ class Emp
 	void read()
 	{
 
-		//System.out.println("*****Enter Employee Details*****");
 		System.out.println("");
 		System.out.println("Enter Employee Id: ");
 		id=scan.nextInt();
@@ -25,20 +24,21 @@ class Emp
 	{
 		double hra,da,pf;
 		da = (salary * 7) / 100;
-        hra = (salary * 10) / 100;
-        pf = (salary * 5) / 100;
-        salary= salary+ da + hra-pf;
+       		 hra = (salary * 10) / 100;
+        	pf = (salary * 5) / 100;
+        	salary= salary+ da + hra-pf;
 	}
 
 	void display()
 	{
 		System.out.println("****Details are as follows****");
-        System.out.println("");
-        System.out.println("Id: "+id);
-        System.out.println("Name: "+name);
-        System.out.println("Salary: "+salary);
+        	System.out.println("");
+        	System.out.println("Id: "+id);
+        	System.out.println("Name: "+name);
+        	System.out.println("Salary: "+salary);
 
 	}
+
 	Address add= new Address();
 
 
@@ -70,13 +70,12 @@ class Manager extends Emp
 class Programmer extends Emp{
 	Scanner scan=new Scanner(System.in);
 	String project_name;
+
 	void readPrg()
 	{
 		System.out.println("Enter Project Name:");
 		project_name=scan.next();
 		add.readAdd();
-
-
 	}
 
 	void disPrg()
@@ -105,25 +104,25 @@ class Address
 		System.out.println("Enter Pincode: ");
 		pincode=scan.nextInt();
 
-	
 	}
 
 	void disAdd()
 	{
-		//System.out.println("****Address Details are as follows****");
-        System.out.println("City Name: "+city);
-        System.out.println("State Name: "+state);
-        System.out.println("Pincode: "+pincode);
-        System.out.println("");
+       		 System.out.println("City Name: "+city);
+       		 System.out.println("State Name: "+state);
+       		 System.out.println("Pincode: "+pincode);
+       		 System.out.println("");
 
 	}
 
 
 }
 
-class Assignment_4{
+class Assignment_4
+{
 
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 
 		System.out.println("Manager Details:");
 		Manager m=new Manager();

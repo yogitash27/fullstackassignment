@@ -28,7 +28,6 @@ class Emp
 			for(int i=0; i<n;i++)
 			{	
 				
-				
 				System.out.println("Enter Employee Id: ");
 				id[i]=scan.nextInt();
 				System.out.println("Enter Employee Name: ");
@@ -37,6 +36,7 @@ class Emp
 				salary[i]=scan.nextDouble();
 				System.out.println("Enter Employee Designation: ");
 				desg[i]=scan.next();
+			
 			}
 
 
@@ -49,13 +49,13 @@ class Emp
 			for(int i=0; i<n;i++)
 			{
 				da = (salary[i] * 7) / 100;
-        		hra = (salary[i] * 10) / 100;
-        		pf = (salary[i] * 5) / 100;
-        		bonus();
-        		salary[i] = salary[i] + da +bonus+ hra-pf;
+        			hra = (salary[i] * 10) / 100;
+        			pf = (salary[i] * 5) / 100;
+        			bonus();
+        			salary[i] = salary[i] + da +bonus+ hra-pf;
         		
         		
-        	}
+        		}
 		}
 
 		void bonus()
@@ -64,20 +64,17 @@ class Emp
 			for(int i=0; i<n;i++)
 			{
 				if(desg[i]=="manager")
-       			{
-        			bonus=(salary[i]*15)/100;
-        			
-        		}
-        		else if(desg[i]=="developer")
-        		{
-        			bonus=(salary[i]*10)/100;
-        			
-        		}
-        		else
-        		{
-        			bonus=(salary[i]*5)/100;
-        			
-        		}
+       				{
+        				bonus=(salary[i]*15)/100;
+        			}
+        			else if(desg[i]=="developer")
+        			{
+        				bonus=(salary[i]*10)/100;
+        			}
+        			else
+        			{
+        				bonus=(salary[i]*5)/100;
+        			}
 			}
 		}
 
@@ -86,12 +83,12 @@ class Emp
 			for(int i=0; i<n;i++)
 			{
 				System.out.println("****Employees Details are as follows****");
-        		System.out.println("");
-        		System.out.println("Employee id is :"+id[i]);
-        		System.out.println("Employee Name: "+name[i]);
-        		System.out.println("Employee Salary is: "+salary[i]);
-        		System.out.println("Employee Designation: "+desg[i]);
-        	}
+        			System.out.println("");
+        			System.out.println("Employee id is :"+id[i]);
+        			System.out.println("Employee Name: "+name[i]);
+        			System.out.println("Employee Salary is: "+salary[i]);
+        			System.out.println("Employee Designation: "+desg[i]);
+        		}
 
 		}
 }
@@ -102,10 +99,10 @@ class Assignment_3
 		System.out.println("How many Records Want to add?");
 		Scanner scan= new Scanner(System.in);
 		int rec=scan.nextInt();
-			Emp e=new Emp(rec);
-			e.read();
-			e.calSalary();
-			e.display();
-		}
+		Emp e=new Emp(rec);
+		e.read();
+		e.calSalary();
+		e.display();
+	}
 	
 }

@@ -14,7 +14,6 @@ class Student
 	void read()
 	{
 		Scanner scan= new Scanner(System.in);
-		{
 		System.out.println("");
 		System.out.println("Enter Student Id: ");
 		sid=scan.nextInt();
@@ -24,42 +23,40 @@ class Student
 		age=scan.nextInt();
 		System.out.println("Enter Marks For PCMB: ");
 		for(int i=0;i<marks.length;i++)
-			{
-				marks[i]=scan.nextInt();
-			}	
-		}
-
+		{
+			marks[i]=scan.nextInt();
+		}	
 	
 	}
 
 	void calGrade()
 	{	
 
-			int total=0;
-			float avg;
-			for(int i=0;i<marks.length;i++)
-			{
-				total=total+marks[i];
-			}
-			avg=total/marks.length;
-			if(avg>90)
-			{
-				grade='A';
+		int total=0;
+		float avg;
+		for(int i=0;i<marks.length;i++)
+		{
+			total=total+marks[i];
+		}
+		avg=total/marks.length;
+		if(avg>90)
+		{
+			grade='A';
 
         	}
-			else if(avg>80)
-			{
-				grade='B';
+		else if(avg>80)
+		{
+			grade='B';
 
         	}
         	else if(avg>70)
-			{
-				grade='C';
+		{
+			grade='C';
 
         	}
         	else if(avg>60)
-			{
-				grade='D';
+		{
+			grade='D';
 
         	}
         	else
@@ -73,11 +70,11 @@ class Student
 	void display()
 	{
 			
-			System.out.println("*****Student Details*****");
-			System.out.println("ID of Student ="+sid);
-			System.out.println("Name of Student ="+sname);
-			System.out.println("Age of Student ="+age);
-			System.out.println("Grade of Student ="+grade);
+		System.out.println("*****Student Details*****");
+		System.out.println("ID of Student ="+sid);
+		System.out.println("Name of Student ="+sname);
+		System.out.println("Age of Student ="+age);
+		System.out.println("Grade of Student ="+grade);
 	
 	}
 }

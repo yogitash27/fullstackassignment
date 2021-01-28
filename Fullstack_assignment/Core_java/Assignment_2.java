@@ -29,28 +29,32 @@ class Assignment_2
 			desg[i]=scan.next();
 
 			if(desg[i]=="manager")
-       		{
-        		bonus=(salary[i]*15)/100;
-        	}
-        	else if(desg[i]=="developer")
-        	{
-        		bonus=(salary[i]*10)/100;
-        	}
-        	else
-        	{
-        		bonus=(salary[i]*5)/100;
-        	}
+       			{
+        			bonus=(salary[i]*15)/100;
+        		}
+
+        		else if(desg[i]=="developer")
+        		{
+        			bonus=(salary[i]*10)/100;
+        		}
+
+        		else
+        		{
+        			bonus=(salary[i]*5)/100;
+        		}
+		
 			da = (salary[i] * 7) / 100;
-        	hra = (salary[i] * 10) / 100;
-        	pf = (salary[i] * 5) / 100;
-        	salary[i] = salary[i] + da +bonus+ hra-pf;
+        		hra = (salary[i] * 10) / 100;
+        		pf = (salary[i] * 5) / 100;
+        		salary[i] = salary[i] + da +bonus+ hra-pf;
         	
-        	System.out.println("Employees Details are as follows");
-        	System.out.println("");
-        	System.out.println("Employee id is :"+id[i]);
-        	System.out.println("Employee Name: "+name[i]);
-        	System.out.println("Employee Salary is: "+salary[i]);
-        	System.out.println("Employee Designation: "+desg[i]);
+        		System.out.println("Employees Details are as follows");
+        		System.out.println("");
+        		System.out.println("Employee id is :"+id[i]);
+        		System.out.println("Employee Name: "+name[i]);
+        		System.out.println("Employee Salary is: "+salary[i]);
+        		System.out.println("Employee Designation: "+desg[i]);
+
 		}
 
 
