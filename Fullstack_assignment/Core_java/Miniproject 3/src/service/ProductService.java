@@ -1,6 +1,5 @@
 package service;
 
-import java.sql.SQLException;
 import java.util.Collections;
 import java.util.List;
 import bean.Product;
@@ -62,15 +61,26 @@ public class ProductService {
 			}
 	}
 	
-	public int updateProduct(int pid,double price) throws ClassNotFoundException, SQLException 
- 	{
-			int r=pd.updateProduct1(pid,price);
-			return r;
-	}
 	
-	public int deleteProduct(int pid) throws ClassNotFoundException, SQLException 
+	public String updateProductPrice(Product pp)
+	{
+		if(pd.updateProductPrice(pp)>0)
+		{
+			return "Price updated successfully";
+		}else 
+		{
+			return "Product not available";
+		}
+	}
+
+	public String deleteProduct(Product pp) 
  	{
-			int r=pd.deleteProduct1(pid);
-			return r;
+		if(pd.deleteProduct1(pp)>0)
+		{
+			return "Product Deleted successfully";
+		}else 
+		{
+			return "Product not available";
+		}
 	}
 }

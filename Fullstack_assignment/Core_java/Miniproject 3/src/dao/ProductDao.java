@@ -64,30 +64,27 @@ Statement stmt;
 			}
 	}
 	
-	public int updateProduct1(int pid, double price) throws SQLException, ClassNotFoundException
-	{
-		try 
-		{
-				con = DbResource.getDbConnection();
-				PreparedStatement pstmt = con.prepareStatement("update product set price = ? where pid = ?");
-		        pstmt.setDouble(1,price); 
-		        pstmt.setInt(2,pid); 
-		        int res=pstmt.executeUpdate();
-		        return res;
-		} catch (SQLException e) 
-		{
+	public int updateProductPrice(Product pp) {
+		try {
+			con = DbResource.getDbConnection();
+			pstmt = con.prepareStatement("update Product set price = ? where pid=?");
+			pstmt.setDouble(1, pp.getPrice());
+			pstmt.setInt(2, pp.getPid());
+			int res = pstmt.executeUpdate();
+			return res;
+		} catch (SQLException e) {
 			System.err.println("SQL Related Exception "+e);
 			return 0;
 		}
+		
 	}
-	
-	public int deleteProduct1(int pid) throws SQLException, ClassNotFoundException
+	public int deleteProduct1(Product pp)
 	{
 		
 		try {
 				con = DbResource.getDbConnection();
 				PreparedStatement pstmt = con.prepareStatement("delete from product where pid = ?");
-		        pstmt.setInt(1,pid); 
+		        pstmt.setInt(1,pp.getPid()); 
 		        int res=pstmt.executeUpdate();
 		        return res;
 				} catch (SQLException e) 

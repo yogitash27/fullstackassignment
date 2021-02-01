@@ -2,12 +2,8 @@ package test;
 
 import static org.junit.Assert.*;
 
-import java.time.LocalDate;
 import java.util.List;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -16,44 +12,84 @@ import service.ProductService;
 
 public class ProductServiceTest {
 	static ProductService ps;
+	
 	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
-		 ps= new ProductService();
-		System.out.println("This method call only once at first time");
+	public static void beforeClass() 
+	{
+		ps=new ProductService();
 	}
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
-		ps = null;
-		System.out.println("This method call only once at last time");
+	
+	//@Test
+	public void testGetAllProductByAsc() 
+	{
+		List<Product> listOfProduct = ps.getAllProductByAsc();
+		assertEquals(2, listOfProduct.size());
+		Product p= listOfProduct.get(0);
+		assertEquals("Mobile", p.getPname());
+		
 	}
-	@Before
-	public void setUp() throws Exception {
-		System.out.println("Before every test method");
+	
+	//@Test
+	public void testGetAllProductByDes() 
+	{
+		List<Product> listOfProduct = ps.getAllProductByDes();
+		assertEquals(2, listOfProduct.size());
+		Product p= listOfProduct.get(0);
+		assertEquals("TV", p.getPname());
+		
 	}
-	@After
-	public void tearDown() throws Exception {
-		System.out.println("After every test method");
+	
+	@Test
+		public void displayPriceLow() 
+		{
+			List<Product> listOfProduct = ps.getAllProductByDes();
+			assertEquals(2, listOfProduct.size());
+			Product p= listOfProduct.get(0);
+			assertEquals("50000", p.getPrice());
+			
+		}
+	
+	//@Test
+	public void testGetAllProduct() 
+	{
+		List<Product> listOfProduct = ps.getAllProduct();
+		assertEquals(2, listOfProduct.size());
+		Product p= listOfProduct.get(0);
+		assertEquals(10000, 10000, 0.0);
+		
 	}
 	//@Test
-	public void testGetAllProductByAsc() {
-		//System.out.println("While testing");
-		List<Product> listOfProduct = ps.getAllProductByAsc();
-		assertEquals(4, listOfProduct.size());
-		Product p= listOfProduct.get(0);
-		assertEquals("Computer", p.getPname());
-	}
-	@Test
-	public void testStoreRecord() {
-		//System.out.println("While testing");
+	public void testStoreRecord() 
+	{
+		
 		Product p = new Product();
-		p.setPid(104);
+		p.setPid(3);
 		p.setPname("Pen");
 		p.setPrice(550);
-		LocalDate ld  = LocalDate.now();
-		p.setStoreDate(ld);
 		String res	= ps.storeRecord(p);
 		String msg = "Record didn't store";
 		assertEquals(msg, res);
+		
 	}
 
+	//@Test
+	public void testUpdateProductPrice() 
+	{
+		Product p = new Product();
+		p.setPid(1);
+		p.setPrice(55555);
+		String res	= ps.updateProductPrice(p);
+		assertEquals("Price updated successfully", res);
+		
+	}
+	
+	//@Test
+	public void testDeleteProduct() 
+	{
+		Product p = new Product();
+		p.setPid(5);
+		String res	= ps.deleteProduct(p);
+		assertEquals("Product didn't deleted", res);
+		
+	}
 }
