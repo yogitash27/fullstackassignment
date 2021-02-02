@@ -34,7 +34,6 @@ Statement stmt;
 					p.setPid(rs.getInt(1));
 					p.setPname(rs.getString(2));
 					p.setPrice(rs.getFloat(3));
-					//p.setStoreDate(rs.getDate(4).toLocalDate());     // converting sql date into LocalDate format.
 					listOfProduct.add(p);
 				}
 			} catch (SQLIntegrityConstraintViolationException e) {

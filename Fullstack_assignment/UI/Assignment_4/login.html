@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" type="text/css" href="style.css">  
+</head>
+<body>
+    <h2>Login Page</h2><br>    
+    <div class="login">    
+        <form id="login" action="login.html" method="post">
+            
+            <label for=""><b>User Name</b></label>
+            <input type="text" name="uname" id="uname" required><br/><br/>
+            <label for=""><b>Password</b><i></i>:</label>
+            <input type="password" name="pass" id="pass" pattern="[a-zA-Z0-9!@#$%^&*]" minlength="5" maxlength="8" required><br/><br/>
+            <input type="radio" name="cust" id="ll" value="Customer" required><b>Customer</b>
+            <input type="radio" name="cust" id="ll" value="Salesperson" required><b>Salesperson</b><br/><br/>
+           <input type="submit" id="ss" value="Sign In"><br/><br/>
+           <input type="reset" id="ss" value="Reset"><br/><br/>
+           <span><p><b><a href="cust.html">Sign Up</a></b></p></span>
+    
+        </form>
+    </div>
+</body>
+</html>

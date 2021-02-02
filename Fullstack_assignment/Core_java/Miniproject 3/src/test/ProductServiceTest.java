@@ -39,7 +39,7 @@ public class ProductServiceTest {
 		
 	}
 	
-	@Test
+	//@Test
 		public void displayPriceLow() 
 		{
 			List<Product> listOfProduct = ps.getAllProductByDes();

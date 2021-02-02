@@ -1,0 +1,70 @@
+body  
+{  
+    margin: 50px;  
+    padding: 0;  
+    background-color: #eef269;
+    font-family: 'Arial';  
+}  
+.cal{  
+        width: 382px;  
+        overflow: hidden;  
+        margin: auto;  
+        margin: 20 0 0 450px;  
+        padding: 50px;  
+        background: #d47d19;  
+        border-radius: 15px ;  
+          
+}  
+h2{  
+    text-align: center;  
+    color: #000000;  
+    padding: 20px;  
+}  
+label{  
+    color: #000000;  
+    font-size: 17px;  
+}  
+
+#firstNumber{  
+    width: 100px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+    margin-left: 30px;
+}  
+#secondNumber{  
+    width: 100px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px; 
+    margin-left: 5px;  
+}  
+
+#result{
+    width: 100px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px; 
+    
+}
+#ss{
+    width: 200px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 17px;  
+    padding-left: 7px;  
+    color:black;
+    font-size: 17px;    
+}
+#ss1{
+    width: 200px;  
+     height: 30px;  
+    border: none;  
+    border-radius: 17px;  
+    padding-left: 7px;  
+    color:black;
+    font-size: 17px;    
+}

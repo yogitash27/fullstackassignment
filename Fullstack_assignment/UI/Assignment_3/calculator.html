@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to online Calculator</title>
+    <link rel="stylesheet" type="text/css" href="cal.css">
+    <script src="cal.js"></script> 
+</head>
+<body>
+    <div class="cal">
+    <h2>Online Calculator</h2><br>    
+            <form id="cal" action="calculator.html" method="post">
+                <label for=""><b>First Number</b></label>
+                <input type="text" id="firstNumber" required/><br><br>
+                <label for=""><b>Second Number</b></label>
+                <input type="text" id="secondNumber" required/><br><br/>
+                <input type="button" id=ss onClick="addition()" Value="Addition"/><br><br/>
+                <input type="button" id=ss1 onClick="subtraction()" Value="Subtraction" /><br><br/>
+                <input type="reset" id="ss" value="Reset"><br/>
+                <p style="text-align:right; margin-right: 30px;"><b><i>Result</i></b></p>
+                <input type="text" id="result" name="result" style="float: right;"/>
+               
+            </form>
+        </div>
+</body>
+</html>
